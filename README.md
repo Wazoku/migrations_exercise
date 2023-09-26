@@ -28,18 +28,14 @@ The application uses 6 models
 6. polls.Answer - stores answers to the poll and the user who provided the answer. This model has a reference to the _Poll_ and _User_ model.
 
 ## Exercise
-- Team 1 members  
-	- Need to checkout and work with branch "feature/testing-model"  
-	- In Testing model:  
-		- Remove "value" field  
-		- Change it to store the following data:  
-			- User who does an action  
-			- Date when the action is done  
-- Team 2 members  
-	- Need to checkout and work with branch "feature/another-testing-model"  
-	- In AnotherTesting model:  
-		- Remove "value" field  
-		- Change it to store the following data:  
-			- User who does an action  
-			- Date when the action is done  
+We're going to have a Migrations Workshop.  
 
+## Exercise Methodology  
+**Teams**
+You will be split into teams, each consisting of two members. 
+
+**Migration Tasks**
+During our upcoming session, you will receive your specific migration tasks. Each team will be responsible for implementing and completing their assigned migrations in separate branches.
+
+
+If you have any questions or require assistance before the session, please do not hesitate to reach out. Please come prepared for the session, and let's make it a productive experience.  
