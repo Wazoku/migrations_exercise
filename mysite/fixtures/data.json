@@ -18,7 +18,7 @@
     "pk": 1,
     "fields": {
       "site_id": 1,
-      "form_fields": {
+      "fields_data": {
         "fields": [
           {
             "label": "Job Title",
@@ -47,7 +47,7 @@
     "pk": 2,
     "fields": {
       "site_id": 2,
-      "form_fields": {
+      "fields_data": {
         "fields" :[
           {
             "label": "City",
