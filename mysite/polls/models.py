@@ -18,6 +18,7 @@ class Profile(models.Model):
 class ProfileForm(models.Model):
     form_fields = models.JSONField()
     site=models.ForeignKey(Site, on_delete=models.CASCADE)
+    is_active = models.BooleanField(default=True, null=True)
 
 # Store poll questions
 class Poll(models.Model):
