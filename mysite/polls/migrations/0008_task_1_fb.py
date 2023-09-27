@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0006_add_poll'),
+        ('polls', '0007_alter_answer_poll'),
     ]
 
     operations = [
