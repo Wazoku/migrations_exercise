@@ -11,9 +11,9 @@ PASSWORD = "qwerty"
 class BaseTestCase(TestCase):
     def setUp(self):
         super().setUp()
-        self.site = models.Site.objects.create(domain="test")
+        self.site = models.Site.objects.create(domain="test", description="Testing the description")
         models.ProfileForm.objects.create(
-            form_fields={
+            fields_data={
                 "fields" :[
                     {
                         "label": "City",
