@@ -8,13 +8,15 @@ from polls import models
 HTTP_200_OK = 200
 USERNAME = "jackm"
 PASSWORD = "qwerty"
+
+
 class BaseTestCase(TestCase):
     def setUp(self):
         super().setUp()
         self.site = models.Site.objects.create(domain="test")
         models.ProfileForm.objects.create(
             form_fields={
-                "fields" :[
+                "fields": [
                     {
                         "label": "City",
                         "id": "city",
@@ -26,10 +28,10 @@ class BaseTestCase(TestCase):
                         "type": "select",
                         "id": "function",
                         "choices": [
-                        ["", "Select a department"],
-                        ["development", "Development"],
-                        ["sales", "Sales"],
-                        ["marketing", "Marketing"]
+                            ["", "Select a department"],
+                            ["development", "Development"],
+                            ["sales", "Sales"],
+                            ["marketing", "Marketing"]
                         ],
                         "required": True
                     }
@@ -61,6 +63,7 @@ class BaseTestCase(TestCase):
         )
         self.client = Client()
 
+
 class TestLogin(BaseTestCase):
     def test_login_template(self):
         response = self.client.get(path=reverse("login"))
@@ -73,6 +76,7 @@ class TestLogin(BaseTestCase):
     def test_login_failure(self):
         login_success = self.client.login(username=USERNAME, password="random")
         assert not login_success, "Login did not fail"
+
 
 class TestIndexView(BaseTestCase):
     def setUp(self):
