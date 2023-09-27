@@ -4,12 +4,14 @@ from django.contrib.auth.models import User
 
 # Site for every client
 class Site(models.Model):
+    name = models.CharField(max_length=10, null=True)
     domain = models.CharField(max_length=10)
 
 # Profile model including additional information
 # about users
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
+    bio = models.CharField(max_length=250, null=True)
     dynamic_fields = models.JSONField(null=True)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
 
