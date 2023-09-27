@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # Site for every client
 class Site(models.Model):
     domain = models.CharField(max_length=10)
+    name = models.CharField(blank=True, null=True, max_length=255)
 
 # Profile model including additional information
 # about users
