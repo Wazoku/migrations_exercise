@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 # Site for every client
 class Site(models.Model):
     domain = models.CharField(max_length=10)
+    description = models.CharField(max_length=100)
 
 # Profile model including additional information
 # about users
@@ -17,6 +18,7 @@ class Profile(models.Model):
 class ProfileForm(models.Model):
     form_fields = models.JSONField()
     site=models.ForeignKey(Site, on_delete=models.CASCADE)
+    is_active = models.BooleanField(default=True)
 
 # Store poll questions
 class Poll(models.Model):
