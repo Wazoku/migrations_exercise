@@ -7,7 +7,7 @@ else
 fi
 
 if [ ! -d "$ve_dir" ]; then
-  python3.8 -m venv "$ve_dir"
+  python3.9 -m venv "$ve_dir"
 fi
 
 "$ve_dir"/bin/pip install -r requirements.txt
