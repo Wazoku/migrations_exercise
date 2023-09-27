@@ -7,7 +7,7 @@ from django.db.models import F
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0009_profileform_is_active'),
+        ('polls', '0013_profileform_is_active'),
     ]
 
     def copy_field(apps, schema_editor):

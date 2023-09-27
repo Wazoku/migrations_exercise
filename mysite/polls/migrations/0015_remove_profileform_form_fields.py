@@ -7,7 +7,7 @@ from polls.utils import HideField
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0010_profileform_fields_data'),
+        ('polls', '0014_profileform_fields_data'),
     ]
 
     operations = [
