@@ -16,7 +16,7 @@ def migrate_data(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0009_profile_bio'),
+        ('polls', '0013_profile_bio'),
     ]
 
     operations = [

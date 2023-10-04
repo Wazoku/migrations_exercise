@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0007_alter_answer_poll'),
+        ('polls', '0011_transition_data_from_form_fields_to_new_fields_profile_form'),
     ]
 
     operations = [

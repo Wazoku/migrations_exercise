@@ -1,5 +1,5 @@
 from django.db import migrations
-from polls.migration_operations import HideField
+from polls.migration_operation import HideField
 
 
 class Migration(migrations.Migration):
