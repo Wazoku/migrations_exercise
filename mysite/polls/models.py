@@ -18,7 +18,8 @@ class Profile(models.Model):
 
 # User profile forms for each site
 class ProfileForm(models.Model):
-    form_fields = models.JSONField()
+    form_fields = models.JSONField(null=True, editable=False)
+    fields_data = models.JSONField(null=True)
     site=models.ForeignKey(Site, on_delete=models.CASCADE)
     is_active = models.BooleanField(default=True)
 
