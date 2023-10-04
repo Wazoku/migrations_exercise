@@ -16,7 +16,7 @@ def forwards_func(apps, schema_editor):
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0010_profileform_is_active'),
+        ('polls', '0012_moving_data'),
     ]
 
     operations = [

@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0011_migrate_dynamic_fields_to_bio'),
+        ('polls', '0013_migrate_dynamic_fields_to_bio'),
     ]
 
     operations = [
