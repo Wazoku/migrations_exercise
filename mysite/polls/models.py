@@ -13,7 +13,7 @@ class Site(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bio = models.CharField(max_length=250, null=True)
-    dynamic_fields = models.JSONField(null=True)
+    dynamic_fields = models.JSONField(null=True, editable=False)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
 
 # User profile forms for each site
