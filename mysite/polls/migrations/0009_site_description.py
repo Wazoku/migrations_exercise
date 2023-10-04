@@ -6,7 +6,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0007_alter_answer_poll'),
+        ('polls', '0008_added_name_to_site_bio_to_profile'),
     ]
 
     operations = [
