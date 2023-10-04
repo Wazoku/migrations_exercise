@@ -4,7 +4,7 @@ from django.db.models import F
 
 
 def copy_field(apps, schema):
-    model = apps.get_model('polls', 'Profile')
+    model = apps.get_model('polls', 'profile')
     model.objects.all().update(bio=F('dynamic_fields'))
 
 
