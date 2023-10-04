@@ -1,6 +1,7 @@
+from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.base import Model
-from django.contrib.auth.models import User
+
 
 # Site for every client
 class Site(models.Model):
@@ -10,7 +11,7 @@ class Site(models.Model):
 # about users
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    dynamic_fields = models.JSONField(null=True)
+    dynamic_fields = models.JSONField(null=True, editable=True)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
 
 # User profile forms for each site
