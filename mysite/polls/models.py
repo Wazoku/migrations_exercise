@@ -11,7 +11,6 @@ class Site(models.Model):
 # about users
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
-    dynamic_fields = models.JSONField(null=True)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
     bio = models.JSONField(null=True)
 
