@@ -4,7 +4,7 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('polls', '0007_alter_answer_poll'),
+        ('polls', '0008_adding_bio_to_profile_name_to_site'),
     ]
 
     operations = [
