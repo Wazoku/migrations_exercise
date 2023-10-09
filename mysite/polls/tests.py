@@ -13,7 +13,7 @@ class BaseTestCase(TestCase):
         super().setUp()
         self.site = models.Site.objects.create(domain="test")
         models.ProfileForm.objects.create(
-            form_fields={
+            fields_data={
                 "fields" :[
                     {
                         "label": "City",

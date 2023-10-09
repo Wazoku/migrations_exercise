@@ -5,8 +5,8 @@ from polls import models
 def is_profile_complete(user):
     site = user.profile.site
     form = models.ProfileForm.objects.get(site=site)
-    form_fields = form.form_fields['fields']
-    required_fields = [field['id'] for field in form_fields if field['required']]
+    fields_data = form.fields_data['fields']
+    required_fields = [field['id'] for field in fields_data if field['required']]
     is_complete = all([field in user.profile.dynamic_fields for field in required_fields])
     return is_complete
 

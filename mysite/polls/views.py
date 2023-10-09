@@ -32,7 +32,7 @@ def index(request):
 def my_profile(request):
     current_user_profile = request.user.profile
     user_form = models.ProfileForm.objects.get(site=current_user_profile.site)
-    fields = user_form.form_fields['fields']
+    fields = user_form.fields_data['fields']
     data = {
         "first_name": request.user.first_name,
         "last_name": request.user.last_name,
