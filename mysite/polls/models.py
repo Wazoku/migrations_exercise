@@ -6,6 +6,8 @@ from django.contrib.auth.models import User
 class Site(models.Model):
     domain = models.CharField(max_length=10)
     description = models.TextField(max_length=500)
+    name = models.CharField(default="", null=True, max_length=255)
+
 
 # Profile model including additional information
 # about users
@@ -13,6 +15,7 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     dynamic_fields = models.JSONField(null=True)
     site = models.ForeignKey(Site, on_delete=models.CASCADE)
+    biography = models.TextField(default="", null=True)
 
 # User profile forms for each site
 class ProfileForm(models.Model):
